@@ -1,0 +1,3 @@
+nose
+tensorflow==1.15.0
+jupyter
