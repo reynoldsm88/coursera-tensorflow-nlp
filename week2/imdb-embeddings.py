@@ -10,12 +10,12 @@ from tensorflow import keras
 import json
 from tensorflow.python.keras.preprocessing.text import Tokenizer
 from tensorflow.python.keras.preprocessing.sequence import pad_sequences
+
 import tensorflow_datasets as tfds
 
 from os.path import exists
 from os import remove
 
-tf.enable_eager_execution()
 write_word_index = False
 
 imdb, info = tfds.load( "imdb_reviews", with_info = True, as_supervised = True )
@@ -29,6 +29,8 @@ for sentence, label in train:
     training_labels.append( label.numpy() )
 # tensorflow requires a numpy array
 training_labels = np.array( training_labels )
+
+training_sentences
 
 testing_sentences = [ ]
 testing_labels = [ ]
@@ -92,7 +94,10 @@ model.summary()
 
 num_training_epochs = 10
 
-model.fit( x = training_sequences,
-           y = training_labels,
-           epochs = num_training_epochs,
-           validation_data = (testing_sequences, testing_labels) )
+# model.fit( x = training_sequences,
+#            y = training_labels,
+#            epochs = num_training_epochs,
+#            validation_data = (testing_sequences, testing_labels) )
+
+for i in range( 0, 5 ):
+    print( training_labels[ i ] )

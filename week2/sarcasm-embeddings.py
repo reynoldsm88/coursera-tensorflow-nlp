@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from __future__ import absolute_import, division, print_function, unicode_literals
+# from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
 
@@ -29,7 +29,7 @@ training_sentences = [ ]
 training_labels = [ ]
 for item in training_data:
     training_sentences.append( item[ 'headline' ] )
-    training_labels.append( item[ 'is_sarcastic' ] )
+    training_labels.append( item[ 'is_sarcastic' ].numpy() )
 
 test_sentences = [ ]
 test_labels = [ ]
