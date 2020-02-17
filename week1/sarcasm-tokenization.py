@@ -9,7 +9,7 @@ from tensorflow.python.keras.preprocessing.sequence import pad_sequences
 from sys import argv
 from os.path import dirname
 
-with open( f"{dirname( argv[ 0 ] )}/sarcasm.json" ) as file:
+with open( "data/sarcasm.json" ) as file:
     data = json.loads( file.read() )
     for entry in data:
         del entry[ 'article_link' ]
