@@ -1,5 +1,5 @@
 nose
-tensorflow==2.1.0
+tensorflow==2.5.1
 tensorflow-datasets
 jupyter
 matplotlib
